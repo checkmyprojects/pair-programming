@@ -12,6 +12,11 @@ public class UserServiceImplements implements IUserService{
 
 @Autowired
 private UserRepository userRepository;
+
+    public UserServiceImplements(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public List<User> findAll() {
 
