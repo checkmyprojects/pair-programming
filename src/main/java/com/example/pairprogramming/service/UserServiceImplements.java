@@ -2,9 +2,10 @@ package com.example.pairprogramming.service;
 
 import com.example.pairprogramming.Entity.Cars;
 import com.example.pairprogramming.Entity.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class UserServiceImplements implements IUserService{
 
 
