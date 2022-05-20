@@ -69,10 +69,34 @@ class CarsServiceImplementsTest {
 
     @Test
     void delete() {
+        Cars car = new Cars(
+                1L,
+                "name",
+                "manufacturer",
+                "img",
+                2000,
+                4,
+                1,
+                "description"
+        );
+        underTest.delete(car.getId());
+        verify(carsRepository).deleteById(1L);
     }
 
     @Test
     void listUser() {
+        Cars car = new Cars(
+                1L,
+                "name",
+                "manufacturer",
+                "img",
+                2000,
+                4,
+                1,
+                "description"
+        );
+        underTest.findById(car.getId());
+        verify(carsRepository).findById(1L);
     }
 
     @Test
