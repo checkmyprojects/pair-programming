@@ -13,10 +13,14 @@ public class CarsServiceImplements implements ICarsService{
     @Autowired
     private CarsRepository carsRepository;
 
+    public CarsServiceImplements (CarsRepository carsRepository){
+        this.carsRepository = carsRepository;
+    }
+
     @Override
     public List<Cars> findAll() {
 
-        return (List<Cars>) carsRepository.findAll() ;
+        return (List<Cars>) carsRepository.findAll();
     }
 
     @Override
