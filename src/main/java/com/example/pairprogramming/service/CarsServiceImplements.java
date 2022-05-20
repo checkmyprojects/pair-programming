@@ -18,7 +18,9 @@ public class CarsServiceImplements implements ICarsService{
     }
 
     @Override
-    public void findById(Long id) {
+    public Cars findById(Long id) {
+        Cars car = new Cars();
+        return car;
 
     }
 
